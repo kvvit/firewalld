@@ -1,0 +1,13 @@
+---
+galaxy_info:
+  author: Khramtsov Valentin
+  description: A module to configure firewalld through variables
+  license: Free
+  min_ansible_version: 2.4
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  categories:
+  - networking
+dependencies: []
