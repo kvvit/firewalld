@@ -1,0 +1,9 @@
+---
+- name: Check OS version
+  debug:
+    var: ansible_os_family
+
+- name: firewalld on CentOS
+  include: fwd_centos.yml
+  when: ansible_os_family == "RedHat"
+

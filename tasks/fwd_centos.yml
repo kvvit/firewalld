@@ -1,0 +1,11 @@
+---
+- name: Add iports to firewalld
+  firewalld:
+    port: "{{ item }}/{{ protocol }}"
+    permanent: yes
+    state: enabled
+  loop: "{{ ports }}"
+  tags:
+    - ports
+  notify: firewalld reload
+
